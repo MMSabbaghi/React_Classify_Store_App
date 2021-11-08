@@ -33,7 +33,13 @@ const SelectGroup = ({ options, onChange, selectedGroupId, onAddGroup }) => {
           {!showForm ? <BiListPlus /> : <BiListCheck />}
         </button>
       </div>
-      {showForm && <AddForm placeholder="group name" onSubmit={onAddGroup} />}
+      {showForm && (
+        <AddForm
+          focusOnInput={showForm}
+          placeholder="group name"
+          onSubmit={onAddGroup}
+        />
+      )}
     </>
   );
 };
